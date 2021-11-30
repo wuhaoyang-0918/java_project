@@ -1,0 +1,25 @@
+student:
+  lastName: zs
+  age: 11
+  boss: true
+  birthday: 2021/10/21
+  maps:
+    k1: a1
+    k2: a2
+  maps2: {k2: a3,k3: a4}
+  list:
+    - name: 小白
+      age: 3
+    - {name: 小何,age: 11}
+  dog:
+    name: 小孩
+    age: 12
+  arr:
+    - b1
+    - b2
+  arr2: [c1,c2]
+  dogMap:
+    xb: {name: zs,age: 10}
+    xv:
+      name: sz
+      age: 12

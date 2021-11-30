@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SpringBoot-asyn" />
+        <module name="SpringBoot-AopLog4j" />
+        <module name="SpringBoot-transaction" />
+        <module name="SpringBoot-init" />
+        <module name="SpringBoot-log4j" />
+        <module name="SpringBoot-Scheduled" />
+        <module name="SpringBoot-Exception" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="untitled" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringBoot-AopLog4j" options="-parameters" />
+      <module name="SpringBoot-Exception" options="-parameters" />
+      <module name="SpringBoot-Scheduled" options="-parameters" />
+      <module name="SpringBoot-asyn" options="-parameters" />
+      <module name="SpringBoot-init" options="-parameters" />
+      <module name="SpringBoot-log4j" options="-parameters" />
+      <module name="SpringBoot-transaction" options="-parameters" />
+      <module name="java_SpringBoot" options="-parameters" />
+      <module name="untitled" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<bean id="complexAssembly" class="org.example.demo.ComplexAssembly">
+    <property name="array">
+     <array>
+    <value>value-array-1</value>
+    <value>value-array-2</value>
+    <value>value-array-3</value>
+    </array>
+    </property>
+    <property name="map">
+        <map>
+            <entry key="key1" value="value-key-1"/>
+            <entry key="key2" value="value-key-2"/>
+            <entry key="key3" value="value-key-2"/>
+        </map>
+    </property>
+    <property name="set">
+        <set>
+            <value>value-set-1</value>
+            <value>value-set-2</value>
+            <value>value-set-3</value>
+        </set>
+    </property>
+    <property name="list">
+        <list>
+            <value>value-list-1</value>
+            <value>value-list-2</value>
+            <value>value-list-3</value>
+        </list>
+    </property>
+
+    <!--<list>
+        <ref bean="student1"/>
+        <ref bean="student2"/>
+        <ref bean="student3"/>
+    </list>
+    <map>
+        <entry key="stu1" value-ref="student1" />
+        <entry key="stu2" value-ref="student2" />
+        <entry key="stu3" value-ref="student3" />
+    </map>
+    <set>
+        <ref bean="emp1" />
+        <ref bean="emp2"/>
+        <ref bean="emp2"/>
+        <ref bean="emp2"/>
+        <ref bean="emp2"/>
+    </set>-->
+
+
+
+</bean>
+</beans>

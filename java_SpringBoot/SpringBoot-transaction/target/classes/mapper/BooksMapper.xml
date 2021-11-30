@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.BooksMapper">
+
+  <resultMap id="BaseResultMap" type="com.example.pojo.Books">
+    <!--@mbg.generated-->
+    <result column="bookID" jdbcType="INTEGER" property="bookID" />
+    <result column="bookName" jdbcType="VARCHAR" property="bookName" />
+    <result column="bookCounts" jdbcType="INTEGER" property="bookCounts" />
+    <result column="detail" jdbcType="VARCHAR" property="detail" />
+  </resultMap>
+
+  <insert id="insert" parameterType="com.example.pojo.Books">
+    <!--@mbg.generated-->
+    insert into test.books (bookID, bookName, bookCounts,
+      detail)
+    values (#{bookID,jdbcType=INTEGER}, #{bookName,jdbcType=VARCHAR}, #{bookCounts,jdbcType=INTEGER},
+      #{detail,jdbcType=VARCHAR})
+  </insert>
+
+</mapper>

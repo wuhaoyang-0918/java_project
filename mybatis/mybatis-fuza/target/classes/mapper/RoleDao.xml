@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.RoleDao">
+
+    <!--一对多的分步查询-->
+    <!--2根据userId查询所具有的角色-->
+    <select id="findRoleByUserId" resultType="com.demo.pojo.Role">
+        select
+        r.id,r.name,r.desc
+        from
+        role r,user_role ur
+        where
+        ur.role_id = r.id
+        and ur.user_id = #{userId}
+    </select>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ch01/ch01.iml" filepath="$PROJECT_DIR$/ch01/ch01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch02/ch02.iml" filepath="$PROJECT_DIR$/ch02/ch02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch03/ch03.iml" filepath="$PROJECT_DIR$/ch03/ch03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch04/ch04.iml" filepath="$PROJECT_DIR$/ch04/ch04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch05/ch05.iml" filepath="$PROJECT_DIR$/ch05/ch05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/ch06.iml" filepath="$PROJECT_DIR$/ch06/ch06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch07-Annoation/ch07-Annoation.iml" filepath="$PROJECT_DIR$/ch07-Annoation/ch07-Annoation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch08-classLoad/ch08-classLoad.iml" filepath="$PROJECT_DIR$/ch08-classLoad/ch08-classLoad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch8-reflection/ch8-reflection.iml" filepath="$PROJECT_DIR$/ch8-reflection/ch8-reflection.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,10 @@
+#spring:
+#  task:
+#    execution:
+#      pool:
+#        queue-capacity: 3
+#        max-size:  3
+#        core-size: 3
+#        keep-alive: 10s
+#        allow-core-thread-timeout: true
+#      thread-name-prefix: async-task-

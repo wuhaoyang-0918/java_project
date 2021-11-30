@@ -1,0 +1,22 @@
+[
+  {
+    "depton": 1,
+    "dname": "开发部",
+    "db_source": "db01"
+  },
+  {
+    "depton": 2,
+    "dname": "人事部",
+    "db_source": "db01"
+  },
+  {
+    "depton": 3,
+    "dname": "財務部",
+    "db_source": "db01"
+  },
+  {
+    "depton": 4,
+    "dname": "运维部",
+    "db_source": "db01"
+  }
+]

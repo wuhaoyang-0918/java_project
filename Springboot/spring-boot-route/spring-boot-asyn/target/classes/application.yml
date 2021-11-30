@@ -1,0 +1,26 @@
+server:
+  servlet:
+    context-path: /log
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zuoye?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 190918
+mybatis:
+  type-aliases-package: com.example.pojo
+  mapper-locations: classpath:mapper/*.xml
+  #configuration:
+    #打印SQL日志
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #驼峰匹配
+    #map-underscore-to-camel-case: true
+
+#trace<debug<info<warn<error
+#com.example.demo1.mapper: debug
+logging:
+  level:
+    root: warn #一些不想看
+    com:       #com.example.demo1.mapper: debug
+      example:
+          dao: debug

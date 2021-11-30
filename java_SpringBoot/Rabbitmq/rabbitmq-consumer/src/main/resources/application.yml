@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  #配置rabbitMq 服务器
+  rabbitmq:
+    host: 192.168.110.200
+    port: 5672
+    username: why
+    password: 123456
+    virtual-host: /vhost
+    listener:
+      simple:
+        acknowledge-mode: manual  #手动签收
+          # 每次签收一条消息  消费者端每次从mq来取一条消息进行消费，直到手动确认消费完毕后才拉取下一条消息(消费端限流 限流作用)
+        #prefetch: 2   #默认:1
+        retry:
+          enabled: true  #开启消费者(程序出现或抛出异常)重试机制，默认开启并无限重试
+          max-attempts: 5  #最大重试次数
+          initial-interval: 3000  #重试间隔时间(毫秒)

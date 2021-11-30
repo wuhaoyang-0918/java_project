@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.why.mapper.FindUserDao">
+    <!--开启二级缓存,此namespace有效,实体类必须要实现序列化接口 -->
+    <cache/>
+    <!--代码片段-->
+    <sql id="comm">
+        <!-- sql标签可以存放多条sql语句中相同的部分列 -->
+        mybatis.user.id,mybatis.user.pwd,mybatis.user.name
+    </sql>
+    <sql id="selectUser">
+        select * from mybatis.user
+    </sql>
+    <!--分页-->
+    <select id="getUserList" resultType="user">
+        select <include refid="comm"/>
+        from mybatis.user
+    </select>
+    <select id="getUserListMap" resultType="java.util.Map" parameterType="map">
+        <!--parameterType="map"可以不用-->
+     select * from mybatis.user where name=#{name} and pwd=#{pwd}
+    </select>
+    <!--bind标签只适用于当前-->
+    <select id="userLikeById" resultType="User">
+        select * from mybatis.user where id=1
+        <bind name="_uname" value="'%' + name + '%'"/>
+        <if test="name!=null">
+              <!--and name  likE  #{_uname}-->
+                  and name  like concat('%',#{name},'%')
+        </if>
+    </select>
+
+    <select id="chooseUserList" resultType="User" parameterType="User">
+        select * from mybatis.user where id=1
+        <choose>
+            <when test="user.name != null and user.name != ''">
+                and name =#{user.name,jdbcType=VARCHAR}
+            </when>
+            <otherwise>
+                and pwd=#{user.pwd,jdbcType=VARCHAR}
+            </otherwise>
+        </choose>
+    </select>
+    <select id="chooseUserList1" resultType="User">
+        select * from mybatis.user where id=1
+        <choose>
+            <when test="name != null and name != ''">
+                and name =#{name,jdbcType=VARCHAR}
+            </when>
+            <otherwise>
+                and pwd=#{pwd,jdbcType=VARCHAR}
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="chooseWhereUser" resultType="User">
+        select <include refid="comm"/> from mybatis.user
+        <!--where去掉多余的and-->
+        <where>
+            <choose>
+                <!--id是字符串才 "id=='1'"-->
+                <when test="id==1">name=#{name,jdbcType=VARCHAR}</when>
+                <when test="id==2">and name=#{name,jdbcType=VARCHAR}</when>
+                <otherwise>and name=#{name,jdbcType=VARCHAR}</otherwise>
+                <!--<otherwise>1=1</otherwise>-->
+            </choose>
+        </where>
+    </select>
+    <select id="whereUser" resultType="User">
+        select * from mybatis.user
+        <where>
+            <if test="name != null and name != ''">
+                 name=#{name,jdbcType=VARCHAR}
+            </if>
+            <if test="pwd != null and pwd != ''">
+               and pwd=#{pwd,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+    <select id="trimUser" resultType="User">
+        select * from mybatis.user
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="name != null and name != ''">
+                name=#{name,jdbcType=VARCHAR}
+            </if>
+            <if test="pwd != null and pwd != ''">
+                and pwd=#{pwd,jdbcType=VARCHAR}
+            </if>
+        </trim>
+    </select>
+
+    <select id="foreachByListUser" resultType="User">
+        select * from mybatis.user
+        where id in
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+    <!--上面的foreach改造-->
+    <!--<select id="foreachByListUser1" resultType="User">
+        select * from mybatis.user
+        <if test="list !=null and list.size>0">
+            where id in
+            <foreach collection="list" open="(" close=")" separator="," item="item">
+                #{item}
+            </foreach>
+        </if>
+    </select>-->
+
+    <select id="getUserCount" resultType="int">
+        SELECT COUNT(*) FROM mybatis.user
+    </select>
+    <select id="getUserNameById" resultType="java.lang.String">
+        select user.name from mybatis.user where id=#{id}
+     </select>
+
+    <select id="queryUserOrderName" resultType="User">
+        select * from mybatis.user where mybatis.user.name=#{name} order by ${ordName} desc
+    </select>
+
+    <select id="queryUserById" resultType="java.util.Map">
+        select * from mybatis.user where id=#{id}
+    </select>
+
+    <!--验证一级缓存-->
+  <!--  <select id="getUserById" resultType="com.why.pojo.User">
+        select <include refid="comm"/>
+        from mybatis.user where id=#{id}
+    </select>-->
+    <!--验证二级缓存,useCache默认是true,false此sql不支持二级缓存-->
+    <select id="getUserById" resultType="com.why.pojo.User" useCache="true">
+        select <include refid="comm"/>
+        from mybatis.user where id=#{id}
+    </select>
+</mapper>

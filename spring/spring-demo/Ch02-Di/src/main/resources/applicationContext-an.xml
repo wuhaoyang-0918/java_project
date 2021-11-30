@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+    <bean id="school" class="org.example.ch03.School">
+        <property name="address" value="背景33"/>
+        <property name="name" value="三张33"/>
+    </bean>
+
+    <bean id="school2" class="org.example.ch03.School">
+        <property name="address" value="背景2"/>
+        <property name="name" value="三张2"/>
+    </bean>
+
+    <bean id="student" class="org.example.ch03.Student" >
+        <property name="age" value="11"/>
+        <property name="name" value="张三"/>
+    </bean>
+
+    <bean id="springContextUtil" class="org.example.ch03.SpringContextUtils" />
+	
+    <context:annotation-config/>
+
+</beans>

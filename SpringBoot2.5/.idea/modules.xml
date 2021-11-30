@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-Durid/SpringBoot-Durid.iml" filepath="$PROJECT_DIR$/SpringBoot-Durid/SpringBoot-Durid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-Junt5/SpringBoot-Junt5.iml" filepath="$PROJECT_DIR$/SpringBoot-Junt5/SpringBoot-Junt5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-Redis/SpringBoot-Redis.iml" filepath="$PROJECT_DIR$/SpringBoot-Redis/SpringBoot-Redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-Swagger/SpringBoot-Swagger.iml" filepath="$PROJECT_DIR$/SpringBoot-Swagger/SpringBoot-Swagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-Swagger2/SpringBoot-Swagger2.iml" filepath="$PROJECT_DIR$/SpringBoot-Swagger2/SpringBoot-Swagger2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-Swagger2.1/SpringBoot-Swagger2.1.iml" filepath="$PROJECT_DIR$/SpringBoot-Swagger2.1/SpringBoot-Swagger2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-init/SpringBoot-init.iml" filepath="$PROJECT_DIR$/SpringBoot-init/SpringBoot-init.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-web/SpringBoot-web.iml" filepath="$PROJECT_DIR$/SpringBoot-web/SpringBoot-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin-service/admin-service.iml" filepath="$PROJECT_DIR$/admin-service/admin-service.iml" />
+    </modules>
+  </component>
+</project>

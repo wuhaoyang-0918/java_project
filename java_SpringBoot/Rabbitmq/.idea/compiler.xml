@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sms-consumer" />
+        <module name="rabbitmq-provider" />
+        <module name="rabbitmq-consumer" />
+        <module name="email-consumer" />
+        <module name="dead-consumber" />
+        <module name="dead-producer" />
+        <module name="gp-producer" />
+        <module name="gp-consumer" />
+        <module name="mayi-producer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dead-consumber" target="1.8" />
+      <module name="dead-producer" target="1.8" />
+      <module name="email-consumer" target="1.8" />
+      <module name="gp-consumer" target="1.8" />
+      <module name="gp-producer" target="1.8" />
+      <module name="mayi-producer" target="1.8" />
+      <module name="rabbitmq-consumer" target="1.8" />
+      <module name="rabbitmq-provider" target="1.8" />
+      <module name="sms-consumer" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dead-consumber" options="-parameters" />
+      <module name="dead-producer" options="-parameters" />
+      <module name="email-consumer" options="-parameters" />
+      <module name="gp-consumer" options="-parameters" />
+      <module name="gp-producer" options="-parameters" />
+      <module name="mayi-producer" options="-parameters" />
+      <module name="rabbitmq-consumer" options="-parameters" />
+      <module name="rabbitmq-provider" options="-parameters" />
+      <module name="sms-consumer" options="-parameters" />
+    </option>
+  </component>
+</project>

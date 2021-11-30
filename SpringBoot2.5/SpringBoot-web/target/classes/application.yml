@@ -1,0 +1,50 @@
+server:
+  port: 8081
+#server:
+#  servlet:
+#    context-path: /log
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis_db?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+  #修改aop代理方式 默认是true(CGLIB) false:jdk动态代理
+  aop:
+    proxy-target-class: true
+  #redis连接
+  redis:
+    password: 123456
+    host: 192.168.110.200
+    port: 6379
+
+  #配置 Admin Server
+  boot:
+    admin:
+      client:
+        url: http://localhost:8888 #配置 Admin Server的地址
+        username: why  #整合security用到
+        password: why  #整合security用到
+  #mybatis整合
+mybatis:
+  type-aliases-package: com.example.pojo
+  mapper-locations: classpath:mapper/*.xml
+  #configuration:
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#指标监控
+management:
+  endpoints:
+    enabled-by-default: true #配置启用所有端点(默认true)  默认情况下，除shutdown以外的所有端点均已启用
+    web:
+      exposure:
+        include: "*" #暴露所有端点   默认:info, health
+        #exclude: env,beans #排除 优先级高于include
+      #base-path:  默认是/actuator   可以修改路径
+  #http://localhost:8081/actuator
+#访问地址:http://localhost:8888/applications
+  #健康信息暴露更多点
+  endpoint:
+    health:
+      show-details: always
+

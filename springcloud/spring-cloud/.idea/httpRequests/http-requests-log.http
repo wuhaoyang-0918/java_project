@@ -1,0 +1,6 @@
+GET http://localhost:8001/dept/list
+
+<> 2020-08-12T014705.200.json
+
+###
+

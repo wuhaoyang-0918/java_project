@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--set注入-->
+    <!-- <bean id="student" class="org.example.Student">
+         <property name="age" value="11"/>
+         <property name="name" value="张三"/>
+         <property name="email" value="17"/>
+         <property name="school" ref="school"/>
+         </bean>
+         <bean id="school" class="org.example.School">
+         <property name="address" value="背景"/>
+         <property name="name" value="三张"/>
+         </bean>
+     -->
+
+    <!--set注入-->
+    <bean id="school" class="org.example.ch02.School">
+        <property name="address" value="背景1"/>
+        <property name="name" value="三张1"/>
+    </bean>
+
+    <!--使用name属性-->
+    <!--  <bean id="student" class="org.example.cho1.Student">
+         <constructor-arg name="age" value="1"/>
+         <constructor-arg name="name" value="1"/>
+         <constructor-arg name="school" ref="school"/>
+      </bean>
+      &lt;!&ndash;使用index属性&ndash;&gt;
+      <bean id="student1" class="org.example.cho1.Student">
+          <constructor-arg index="0" value="1"/>
+          <constructor-arg index="1" value="1"/>
+          <constructor-arg index="2" ref="school"/>
+      </bean>
+      &lt;!&ndash;使用省略index属性&ndash;&gt;
+      <bean id="student2" class="org.example.cho1.Student">
+          <constructor-arg  value="1"/>
+          <constructor-arg  value="1"/>
+          <constructor-arg  ref="school"/>
+      </bean>-->
+    <!--byName自动注入-->
+    <bean id="student02" class="org.example.ch02.Student" autowire="byName">
+        <property name="age" value="11"/>
+        <property name="name" value="张三"/>
+    </bean>
+    <!--byType自动注入-->
+    <bean id="student03" class="org.example.ch02.Student" autowire="byType">
+        <property name="age" value="11"/>
+        <property name="name" value="张三"/>
+    </bean>
+
+</beans>

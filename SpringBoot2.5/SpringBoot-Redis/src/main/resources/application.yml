@@ -1,0 +1,29 @@
+spring:
+  redis:
+    host: 192.168.110.200            #主从复制或者哨兵都要是主节点的ip
+    password: 123456
+    port: 6379
+    client-type: lettuce   #默认是lettuce
+    database: 0
+    #连接超时时间
+    timeout: 10000ms
+    lettuce:
+      pool:
+        #最大连接数，默认8
+        max-active: 1024
+        #最大连接阻塞等待时间，毫秒 默认-1ms
+        max-wait: 10000ms
+        #最大空闲连接，默认8
+        max-idle: 200
+        #最小空闲连接，默认0
+        min-idle: 5
+    #sentinel:   #需要注释上面host 和端口号
+      # redis主节点
+     # master: mymaster
+      # 哨兵节点
+     # nodes: 192.168.10.100:26379,192.168.10.101:26379,192.168.10.102:26379
+      # 密码
+      #password: 123456   #不需要配置配置了报错
+
+
+

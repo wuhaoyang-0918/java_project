@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--设置日志-->
+    <settings>
+        <!--打印SQL语句支持mybatis log plugin-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <!--别名-->
+    <typeAliases>
+        <package name="com.demo.pojo" />
+    </typeAliases>
+
+    <!--注册mapper-->
+   <!-- <mappers>
+        <mapper resource="mapper/PetTypeMapper.xml"/>
+
+        *接口和他的Mapper配置文件必须同名！
+        *接口和她的Mapper配置文件必须在同一个包下！
+        <mapper class="com.kuang.dao.UserMapper"/>
+        <package name="com.kuang.dao"/>
+    </mappers>-->
+</configuration>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/ch06-ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/ch07-SSM" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/ch01/pom.xml" />
+        <option value="$PROJECT_DIR$/Ch02-Di/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06-ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/ch07-SSM/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

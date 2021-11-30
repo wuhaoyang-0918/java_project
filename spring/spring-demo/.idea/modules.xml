@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ch02-Di/Ch02-Di.iml" filepath="$PROJECT_DIR$/Ch02-Di/Ch02-Di.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch01/ch01.iml" filepath="$PROJECT_DIR$/ch01/ch01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch03-anno/ch03-anno.iml" filepath="$PROJECT_DIR$/ch03-anno/ch03-anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch04-aop/ch04-aop.iml" filepath="$PROJECT_DIR$/ch04-aop/ch04-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06-ssm/ch06-ssm.iml" filepath="$PROJECT_DIR$/ch06-ssm/ch06-ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch07-SSM/ch07-SSM.iml" filepath="$PROJECT_DIR$/ch07-SSM/ch07-SSM.iml" />
+    </modules>
+  </component>
+</project>

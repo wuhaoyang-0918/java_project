@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dead-consumber/dead-consumber.iml" filepath="$PROJECT_DIR$/dead-consumber/dead-consumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dead-producer/dead-producer.iml" filepath="$PROJECT_DIR$/dead-producer/dead-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/email-consumer/email-consumer.iml" filepath="$PROJECT_DIR$/email-consumer/email-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-consumer/gp-consumer.iml" filepath="$PROJECT_DIR$/gp-consumer/gp-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-producer/gp-producer.iml" filepath="$PROJECT_DIR$/gp-producer/gp-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mayi-producer/mayi-producer.iml" filepath="$PROJECT_DIR$/mayi-producer/mayi-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-consumer/rabbitmq-consumer.iml" filepath="$PROJECT_DIR$/rabbitmq-consumer/rabbitmq-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-provider/rabbitmq-provider.iml" filepath="$PROJECT_DIR$/rabbitmq-provider/rabbitmq-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sms-consumer/sms-consumer.iml" filepath="$PROJECT_DIR$/sms-consumer/sms-consumer.iml" />
+    </modules>
+  </component>
+</project>

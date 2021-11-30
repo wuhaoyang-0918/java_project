@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"/>
+    <!--设置日志-->
+    <settings>
+        <!-- <setting name="logImpl" value="STDOUT_LOGGING"/>
+             <setting name="logImpl" value="LOG4J"/>
+         -->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--显示的开启全局（二级）缓存，默认是true可以不配-->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+    <typeAliases>
+        <package name="com.demo.pojo"/>
+    </typeAliases>
+    <!--分页插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--加不加都可以-->
+            <!--<property name="helperDialect" value="mysql"/>-->
+        </plugin>
+    </plugins>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}" />
+                <property name="url" value="${jdbc.url}" />
+                <property name="username" value="${jdbc.username}" />
+                <property name="password" value="${jdbc.password}" />
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapper/OrderDao.xml"/>
+        <mapper resource="mapper/UserDao.xml"/>
+        <mapper resource="mapper/RoleDao.xml"/>
+    </mappers>
+</configuration>

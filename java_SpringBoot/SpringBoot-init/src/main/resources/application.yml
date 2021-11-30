@@ -1,0 +1,22 @@
+#person:
+#  lastName: hello
+#  age: 18
+#  boss: false
+#  birth: 2017/12/12
+#  maps: {k1: v1,k2: 12}   #行内写法
+#  lists:   #行内写法:list: {list,zhaoliyu}
+#    - list
+#    - zhaoliyu
+#  dog:     #行内写法:dog: {name: 小狗,age: 18}
+#    name: 小狗1
+
+logging:
+  #level:
+   #root: warn
+   #com.example: trace      #就这个包日志输出级别替代log/logback.xml日志输出级别
+  config: classpath:log/logback.xml
+
+spring:
+    thymeleaf:
+      cache: false
+

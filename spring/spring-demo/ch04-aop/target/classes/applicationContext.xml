@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--声明目标对象  可以省略  加@Component和<context:component-scan/>-->
+    <bean id="someService" class="org.example.service.impl.SomeServiceImpl"/>
+    <!--声明切面类基于注解的-->
+    <bean id="myAspect" class="org.example.handel.MyAspect"/>
+    <!--声明切面类基于xml的-->
+    <bean id="myAdvice" class="org.example.handel.MyAdvice"/>
+    <!--声明自动代理生成器，创建代理-->
+    <aop:aspectj-autoproxy/>
+
+    <!--基于xml  Aop配置-->
+    <!--配置将通知织入到目标对象中-->
+    <aop:config>
+        <!--切入点表达式-->
+        <aop:pointcut id="pc" expression="execution(* org.example.service.impl.*.*(..))"/>
+        <aop:aspect ref="myAdvice">
+            <!--前置-->
+        <aop:before method="before" pointcut-ref="pc"/>
+            <!--后置-->
+        <aop:after-returning method="afterReturn" pointcut-ref="pc" returning="res"/>
+            <!--异常-->
+        <aop:after-throwing method="afterThrowing" pointcut-ref="pc" throwing="ex"/>
+            <!--环绕-->
+        <aop:around method="around" pointcut-ref="pc"/>
+            <!--最终-->
+        <aop:after method="after" pointcut-ref="pc"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

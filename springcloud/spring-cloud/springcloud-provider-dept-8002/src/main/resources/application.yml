@@ -1,0 +1,33 @@
+server:
+  port: 8002
+
+mybatis:
+  type-aliases-package: com.why.springcloud.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+
+spring:
+  application:
+    name: springcloud-provider-dept   #serviceiD
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #数据源
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db02?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: 190918
+logging:
+  level:
+    com.why.springcloud.dao: debug
+
+#Eureka的配置  服注册在哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: springcloud-provider-dept8002 #修改Eureka上的默认描述信息
+
+#info配置
+info:
+  app.name: why-springcloud
+  company.name: blog.why.com

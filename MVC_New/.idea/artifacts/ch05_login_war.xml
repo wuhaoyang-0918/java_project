@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ch05-login:war">
+    <output-path>$PROJECT_DIR$/ch05-login/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>ch05-login</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="ch05-login-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ch05-login:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.why.mapper.TeacherMapper">
+
+    <select id="getTeacher" resultMap="teacherStudent">
+        select s.id,s.name,t.id t_id,t.name t_name
+        from mybatis.student s,mybatis.teacher t
+        where s.tid=t.id and t.id=#{tid}
+    </select>
+    <resultMap id="teacherStudent" type="com.why.pojod.Teacher2">
+        <result column="t_id" property="id"/>
+        <result column="t_name" property="name"/>
+        <collection property="students" ofType="com.why.pojod.Student1">
+            <result column="id" property="id"/>
+            <result column="name" property="name"/>
+            <result column="t_id" property="tid"/>
+        </collection>
+    </resultMap>
+
+</mapper>
